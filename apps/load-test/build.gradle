@@ -5,9 +5,9 @@ repositories {
 }
 
 dependencies {
-  testCompile('org.scala-lang:scala-library:2.12.4')
-  testCompile('io.gatling:gatling-app:2.3.1')
-  testCompile('io.gatling.highcharts:gatling-charts-highcharts:2.3.1')
+  testImplementation 'org.scala-lang:scala-library:2.12.4'
+  testImplementation 'io.gatling:gatling-app:2.3.1'
+  testImplementation 'io.gatling.highcharts:gatling-charts-highcharts:2.3.1'
 }
 
 task gatlingRun(type: JavaExec) {
