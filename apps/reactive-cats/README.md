@@ -3,8 +3,9 @@ How to build:
 ```shell script
 $ gradle :apps:reactive-cats:shadowJar
 ```
+---
 
-How to run:
+How to run app:
 
 ```shell script
 $ java -jar \
@@ -14,4 +15,13 @@ $ java -jar \
   -Djava.net.preferIPv6Addresses=false \
   -Dspring.output.ansi.enabled=ALWAYS \
   apps/reactive-cats/build/libs/reactive-cats.jar
+```
+---
+
+How to run load test:
+```shell script
+$ ./gradlew -p apps/load-test \
+  -DTARGET_URL=http://localhost:8083/300 \
+  -DSIM_USERS=1000 \
+  gatlingRun
 ```
